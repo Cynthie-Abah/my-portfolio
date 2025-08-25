@@ -1,0 +1,97 @@
+"use client"
+
+import { ExternalLink } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+
+const certifications = [
+  {
+    title: "AWS Certified Solutions Architect – Associate",
+    issuer: "Amazon Web Services",
+    date: "Issued May 2024",
+    // credentialUrl: "/project.jpg",
+    credentialUrl: "https://aws.amazon.com/certification/certificates/",
+    logo: "/plantnest.jpg",
+  },
+  {
+    title: "Google Professional Cloud Developer",
+    issuer: "Google Cloud",
+    date: "Issued Feb 2023",
+    // credentialUrl: "/project.jpg",
+    credentialUrl: "https://cloud.google.com/certification",
+    logo: "/project.jpg",
+  },
+  {
+    title: "Frontend Developer Career Path",
+    issuer: "Scrimba",
+    date: "Issued Nov 2022",
+    // credentialUrl: "/project.jpg",
+    credentialUrl: "https://scrimba.com/certificates",
+    logo: "/project.jpg",
+  },
+]
+
+export default function CertificationsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-950 to-[#200550] pt-28">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <h1 className="text-4xl lg:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
+            Certifications
+          </h1>
+          <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            A showcase of my certifications and credentials that validate my
+            skills across cloud, web, and software development.
+          </p>
+        </div>
+
+        {/* Certifications Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {certifications.map((cert, index) => (
+            <div
+              key={index + cert.title}
+              className="bg-white dark:bg-gray-950 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-200 dark:border-gray-700"
+            >
+               <div className="w-full h-56 overflow-hidden relative">
+                  <Image
+                  fill
+                    src={cert.logo}
+                    alt={cert.title}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  {cert.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-2">
+                  {cert.issuer}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                  {cert.date}
+                </p>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+        {/* Empty State (if no certs yet) */}
+        {certifications.length === 0 && (
+          <div className="text-center py-20">
+            <div className="text-6xl mb-4">📜</div>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Certifications Coming Soon
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              I'm currently working on adding my certifications here. Stay
+              tuned!
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
