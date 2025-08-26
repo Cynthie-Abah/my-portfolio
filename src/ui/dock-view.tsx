@@ -26,7 +26,7 @@ export type DockItemData = {
 };
 
 interface HoverableProps {
-  isHovered: any;
+  isHovered: boolean | MotionValue<number>;
 }
 
 export type DockProps = {

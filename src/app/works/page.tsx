@@ -4,6 +4,8 @@ import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import HomeText from "@/components/home-text";
+// import DecryptedText from "@/ui/decrypted-text";
 
 const works = [
   {
@@ -168,13 +170,24 @@ export default function Page() {
   <div className="max-w-6xl mx-auto px-6 lg:px-8">
     {/* Header */}
     <div className="text-center mb-16">
-      <h1 className="text-4xl lg:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
-        My Works
-      </h1>
+      <HomeText 
+        text={' My Works'} 
+        className={'w-full flex justify-center text-4xl lg:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4'} />
+
       <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
         Explore my projects organized by technology stack and expertise area.  
         Each category highlights a unique aspect of my development journey.
       </p>
+
+        {/* <DecryptedText
+        className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
+        text={`Explore my projects organized by technology stack and expertise area.
+        Each category highlights a unique aspect of my development journey.`}
+        speed={250}
+        animateOn="view"
+        revealDirection="center"
+        /> */}
+     
     </div>
 
     {/* Stack Categories Grid */}
@@ -292,7 +305,7 @@ export default function Page() {
               Projects Coming Soon
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              I'm working on adding projects to this category. Check back soon!
+              I&apos;m working on adding projects to this category. Check back soon!
             </p>
           </div>
         )}

@@ -1,12 +1,9 @@
 "use client"
-
-import { ExternalLink } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 
 const certifications = [
   {
-    title: "AWS Certified Solutions Architect – Associate",
+    title: "AWS Certified Solutions Architect  Associate",
     issuer: "Amazon Web Services",
     date: "Issued May 2024",
     // credentialUrl: "/project.jpg",
@@ -86,7 +83,7 @@ export default function CertificationsPage() {
               Certifications Coming Soon
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              I'm currently working on adding my certifications here. Stay
+              I&apos;m currently working on adding my certifications here. Stay
               tuned!
             </p>
           </div>
