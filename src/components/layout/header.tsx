@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
-import { Home, Briefcase, GraduationCap, UserCircle } from "lucide-react";
+import { Home, Briefcase, GraduationCap, UserCircle, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Header() {
-  // const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const navigation = [
@@ -19,15 +20,15 @@ export default function Header() {
   return (
     <>
       {/* Desktop header */}
-      <header className="flex fixed top-4 right-4 z-50 border-2 border-blue-600 dark:border-blue-400 text-white rounded-lg shadow-lg h-14 items-center px-4 space-x-6 bg-transparent backdrop-blur-sm">
-        <nav className="flex items-center gap-6">
+      <header className="hidden sm:flex fixed top-2 sm:top-4 sm:right-4 z-50 border-2 border-blue-600 dark:border-blue-400 text-white rounded-lg shadow-lg h-14 items-center px-1 sm:px-4 space-x-1 sm:space-x-6 bg-transparent backdrop-blur-sm ">
+        <nav className="flex items-center gap-1 sm:gap-6">
           {navigation.map((item) => {
             const Icon = item.icon;
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                className={`flex items-center gap-2 px-2 sm:px-3 py-2 rounded-md text-[.78rem] sm:text-lg font-medium transition-colors duration-200 ${
                   isActive(item.href)
                     ? "text-blue-400 bg-blue-900/30"
                     : "text-gray-300 hover:text-blue-400 hover:bg-gray-700/50"
@@ -41,21 +42,19 @@ export default function Header() {
         </nav>
       </header>
 
-      {/* Mobile header */}
-      {/* <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-gray-800 text-white shadow-lg px-4 py-3 flex justify-between items-center">
-        <span className="font-bold">My Site</span>
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="p-2 rounded-md hover:bg-gray-700"
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      <div className="fixed sm:hidden top-2 left-2 z-50 text-white rounded-lg flex flex-col  justify-center p-2 bg-transparent backdrop-blur-sm border-2 border-blue-600 dark:border-blue-400 shadow-2xl">
+        <button className="hover:bg-gray-600/50" onClick={()=> setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        {
+          isMobileMenuOpen ? 
+          <X /> : 
+           <Menu />
+        }
+         
         </button>
-      </header> */}
 
-      {/* Mobile menu dropdown */}
-      {/* {isMobileMenuOpen && (
-        <div className="md:hidden fixed top-14 left-0 right-0 bg-gray-800 text-white shadow-lg py-4 space-y-2 z-40">
+         {/* Mobile menu dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden top-14 left-0 right-0 text-white shadow-lg py-4 space-y-2">
           {navigation.map((item) => {
             const Icon = item.icon;
             return (
@@ -75,7 +74,10 @@ export default function Header() {
             );
           })}
         </div>
-      )} */}
+      )}
+      </div>
+
+     
     </>
   );
 }
