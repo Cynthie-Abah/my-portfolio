@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
 
 interface TrueFocusProps {
     sentence?: string;
@@ -9,6 +10,7 @@ interface TrueFocusProps {
     glowColor?: string;
     animationDuration?: number;
     pauseBetweenAnimations?: number;
+    textClassName?: string;
 }
 
 interface FocusRect {
@@ -26,8 +28,9 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
     glowColor = "rgba(0, 255, 0, 0.6)",
     animationDuration = 0.5,
     pauseBetweenAnimations = 1,
+    textClassName = "",
 }) => {
-    const words = sentence.split(" ");
+    const words = sentence.split("-");
     const [currentIndex, setCurrentIndex] = useState<number>(0);
     const [lastActiveIndex, setLastActiveIndex] = useState<number | null>(null);
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -83,7 +86,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
                     <span
                         key={index}
                         ref={(el) => { wordRefs.current[index] = el; }}
-                        className="relative text-[3rem] font-black cursor-pointer"
+                        className={cn(`relative text-[3rem] font-black cursor-pointer`, textClassName)}
                         style={{
                             filter: manualMode
                                 ? isActive

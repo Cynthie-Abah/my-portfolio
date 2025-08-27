@@ -1,4 +1,5 @@
 "use client"
+import HomeText from "@/components/home-text"
 import Image from "next/image"
 
 const certifications = [
@@ -6,7 +7,6 @@ const certifications = [
     title: "AWS Certified Solutions Architect  Associate",
     issuer: "Amazon Web Services",
     date: "Issued May 2024",
-    // credentialUrl: "/project.jpg",
     credentialUrl: "https://aws.amazon.com/certification/certificates/",
     logo: "/plantnest.jpg",
   },
@@ -14,7 +14,6 @@ const certifications = [
     title: "Google Professional Cloud Developer",
     issuer: "Google Cloud",
     date: "Issued Feb 2023",
-    // credentialUrl: "/project.jpg",
     credentialUrl: "https://cloud.google.com/certification",
     logo: "/project.jpg",
   },
@@ -22,7 +21,6 @@ const certifications = [
     title: "Frontend Developer Career Path",
     issuer: "Scrimba",
     date: "Issued Nov 2022",
-    // credentialUrl: "/project.jpg",
     credentialUrl: "https://scrimba.com/certificates",
     logo: "/project.jpg",
   },
@@ -34,9 +32,10 @@ export default function CertificationsPage() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <h1 className="text-4xl lg:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
-            Certifications
-          </h1>
+          <HomeText
+              text={'Certifications'} 
+              className={'w-full flex justify-center text-4xl lg:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4'} />
+
           <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
             A showcase of my certifications and credentials that validate my
             skills across cloud, web, and software development.
@@ -44,7 +43,7 @@ export default function CertificationsPage() {
         </div>
 
         {/* Certifications Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 pb-5">
           {certifications.map((cert, index) => (
             <div
               key={index + cert.title}

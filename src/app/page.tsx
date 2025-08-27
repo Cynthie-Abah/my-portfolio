@@ -15,26 +15,26 @@ export default function Home() {
 
       <DarkVeil />
 
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16 absolute">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center top-0 absolute">
           <div className="text-center">
             
             <HomeText 
             text={devName} 
-            className={'w-full flex justify-center text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6'} />
-  
+            className={'w-full flex justify-center text-4xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6'} />
             
-            <div className="text-xl lg:text-2xl text-blue-600 dark:text-blue-600 font-medium mb-8">
+            <div className=" text-blue-600 dark:text-blue-600 font-medium mb-8">
               <TrueFocus
-              sentence="Software-Engineer  Tech-Nurse"
+              sentence="Software Engineer-Tech Nurse"
               manualMode={false}
               blurAmount={5}
               borderColor="red"
               animationDuration={2}
               pauseBetweenAnimations={1}
+              textClassName='lg:text-5xl text-xl'
               />
             </div>
             
-           <div className=" text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed font-mono text-shadow-sm">
+           <div className="text-gray-300 max-w-4xl mx-auto mb-10 leading-relaxed font-mono text-shadow-sm text-sm sm:text-lg">
             <DecryptedText
               text="I craft exceptional digital experiences through modern web technologies, scalable backend systems, and innovative mobile applications. With a passion for clean code and user-centric design, I bring ideas to life."
               speed={250}
