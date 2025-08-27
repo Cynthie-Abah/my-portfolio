@@ -166,13 +166,13 @@ export default function Page() {
   };
 
   return (
-<div className="min-h-screen bg-gradient-to-b from-gray-950 to-[#200550] pb-5 pt-28">
+<div className="min-h-screen bg-gradient-to-b from-gray-950 to-[#200550] pb-5 pt-20 sm:pt-28">
   <div className="max-w-6xl mx-auto px-6 lg:px-8">
     {/* Header */}
     <div className="text-center mb-16">
       <HomeText 
         text={' My Works'} 
-        className={'w-full flex justify-center text-4xl lg:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4'} />
+        className={'w-full flex justify-center text-4xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4'} />
 
       <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
         Explore my projects organized by technology stack and expertise area.  

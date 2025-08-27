@@ -30,7 +30,7 @@ export default function Home() {
               borderColor="red"
               animationDuration={2}
               pauseBetweenAnimations={1}
-              textClassName='lg:text-5xl text-xl'
+              textClassName='lg:text-5xl text-2xl'
               />
             </div>
             
