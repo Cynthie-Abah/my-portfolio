@@ -4,24 +4,24 @@ import Image from "next/image"
 
 const certifications = [
   {
-    title: "AWS Certified Solutions Architect  Associate",
-    issuer: "Amazon Web Services",
-    date: "Issued May 2024",
-    credentialUrl: "/udemy.jpg",
+    title: "Women TechStars Fellowship Program: Software Development stack",
+    issuer: "Tech4Dev",
+    date: "Issued 2024",
+    credentialUrl: "/wtf-cert.jpg",
     logo: "/wtf-cert.jpg",
   },
   {
-    title: "Google Professional Cloud Developer",
-    issuer: "Google Cloud",
-    date: "Issued Feb 2023",
-    credentialUrl: "/greatlearning.jpeg",
+    title: "Ultimate React and Next.js Course: Redux, context, react-query, and more",
+    issuer: "Udemy",
+    date: "Issued 2025",
+    credentialUrl: "/udemy.jpg",
     logo: "/udemy.jpg",
   },
   {
-    title: "Frontend Developer Career Path",
+    title: "Great Learning Frontend Course",
     issuer: "Scrimba",
-    date: "Issued Nov 2022",
-    credentialUrl: "/wtf-cert.pdf",
+    date: "Issued April 2024",
+    credentialUrl: "/greatlearning.jpeg",
     logo: "/greatlearning.jpeg",
   },
 ]
