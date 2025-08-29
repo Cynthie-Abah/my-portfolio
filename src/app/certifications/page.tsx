@@ -4,16 +4,16 @@ import Image from "next/image"
 
 const certifications = [
   {
-    title: "Women TechStars Fellowship Program: Software Development stack",
+    title: "Women Techsters Fellowship Program: Software Development stack",
     issuer: "Tech4Dev",
-    date: "Issued 2024",
+    date: "Issued October 2024",
     credentialUrl: "/wtf-cert.jpg",
     logo: "/wtf-cert.jpg",
   },
   {
     title: "Ultimate React and Next.js Course: Redux, context, react-query, and more",
     issuer: "Udemy",
-    date: "Issued 2025",
+    date: "Issued August 2025",
     credentialUrl: "/udemy.jpg",
     logo: "/udemy.jpg",
   },
@@ -49,9 +49,10 @@ export default function CertificationsPage() {
               key={index + cert.title}
               className="bg-white dark:bg-gray-950 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-200 dark:border-gray-700"
             >
-               <div className="w-full h-56 overflow-hidden relative">
+               <div className="w-full overflow-hidden relative">
                   <Image
-                  fill
+                  width={400}
+                  height={225}
                     src={cert.logo}
                     alt={cert.title}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
