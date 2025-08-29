@@ -34,7 +34,7 @@ export default function Home() {
               />
             </div>
             
-           <div className="text-gray-300 max-w-4xl mx-auto mb-10 leading-relaxed font-mono text-shadow-sm text-sm sm:text-lg">
+           <div className="text-gray-300 max-w-4xl mx-auto mb-10 leading-relaxed font-mono text-shadow-sm text-medium sm:text-lg">
             <DecryptedText
               text="I craft exceptional digital experiences through modern web technologies, scalable backend systems, and innovative mobile applications. With a passion for clean code and user-centric design, I bring ideas to life."
               speed={250}

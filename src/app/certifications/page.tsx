@@ -7,22 +7,22 @@ const certifications = [
     title: "AWS Certified Solutions Architect  Associate",
     issuer: "Amazon Web Services",
     date: "Issued May 2024",
-    credentialUrl: "https://aws.amazon.com/certification/certificates/",
-    logo: "/plantnest.jpg",
+    credentialUrl: "/udemy.jpg",
+    logo: "/wtf-cert.jpg",
   },
   {
     title: "Google Professional Cloud Developer",
     issuer: "Google Cloud",
     date: "Issued Feb 2023",
-    credentialUrl: "https://cloud.google.com/certification",
-    logo: "/project.jpg",
+    credentialUrl: "/greatlearning.jpeg",
+    logo: "/udemy.jpg",
   },
   {
     title: "Frontend Developer Career Path",
     issuer: "Scrimba",
     date: "Issued Nov 2022",
-    credentialUrl: "https://scrimba.com/certificates",
-    logo: "/project.jpg",
+    credentialUrl: "/wtf-cert.pdf",
+    logo: "/greatlearning.jpeg",
   },
 ]
 
