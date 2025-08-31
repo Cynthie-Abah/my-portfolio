@@ -24,7 +24,7 @@ export default function Home() {
             
             <div className=" text-blue-600 dark:text-blue-600 font-medium mb-8">
               <TrueFocus
-              sentence="Software Engineer-Tech Nurse"
+              sentence="Software Engineer-Student Nurse"
               manualMode={false}
               blurAmount={5}
               borderColor="red"
@@ -36,7 +36,7 @@ export default function Home() {
             
            <div className="text-gray-300 max-w-4xl mx-auto mb-10 leading-relaxed font-mono text-shadow-sm text-medium sm:text-lg">
             <DecryptedText
-              text="I craft exceptional digital experiences through modern web technologies, scalable backend systems, and innovative mobile applications. With a passion for clean code and user-centric design, I bring ideas to life."
+              text="From Technology to Healthcare, my journey is fueled by a passion for solving problems, creating meaningful experiences, and building solutions that improve lives."
               speed={250}
               animateOn="view"
               revealDirection="center"

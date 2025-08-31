@@ -193,7 +193,8 @@ export default function Page() {
     {/* Stack Categories Grid */}
     <div className="space-y-4">
       {works.map((category, index) => (
-        
+        // https://examples.motion.dev/react/accordion
+        // use motion animation for accordions
         <div
           key={index + category.title}
           className="border border-gray-200 dark:border-gray-900 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 bg-white/70 dark:bg-gray-950/80 hover:bg-gray-100 dark:hover:bg-gray-950 backdrop-blur-sm"
