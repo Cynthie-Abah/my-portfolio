@@ -34,18 +34,18 @@ const containerRef = useRef<HTMLDivElement | null>(null);
     <div ref={containerRef} className="h-[75vh] w-full overflow-y-auto">
     <div className="relative py-2">
 
-      <div className="italic text-gray-400 mb-8 w-[90%] md:w-[70%] mx-auto text-[1.05rem]">
-        My love for nuturing and caring for people started early. As a child, I was always drawn to helping people feel better, whether it was tending to a someone who wasn't feeling well or staying close and offering emotional relief.
-      </div>
+        <div className="italic text-gray-400 mb-8 w-[90%] lg:w-[70%] mx-auto text-sm sm:text-[1.05rem]">
+            I was always drawn to helping people feel better even at a young age, whether it was tending to a someone who wasn't feeling well or staying close and offering emotional relief.
+        </div>
 
       {/* progress line */}
       <div className="flex justify-center mx-auto gap-5 mb-10 w-full">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className=" left-2.5 top-2 w-1.5 bg-[#8319f1] rounded-full origin-top right-0 z-50"
+          className="w-3 sm:w-1.5 bg-[#8319f1] rounded-full origin-top z-50"
         />
 
-        <div className="">
+        <div className="md:w-[90%] lg:w-[70%] flex flex-col">
            {timelineData.map((item, index) => (
           <motion.div
             key={index + item.title}
@@ -56,19 +56,20 @@ const containerRef = useRef<HTMLDivElement | null>(null);
             className="mb-6 relative"
           >
             {/* Dot */}
-            <span className="absolute -left-2 flex items-center justify-center w-6 h-6 bg-gradient-to-b from-blue-600/50 to-[#8319f1]/50 rounded-full shadow-2xl" />
+            <span className="absolute -left-3 sm:-left-2 flex items-center justify-center w-6 h-6 sm:w-5 sm:h-5 bg-gradient-to-b from-blue-600/50 to-[#8319f1]/50 rounded-full shadow-2xl" />
 
             {/* Accordion */}
             <button
-              className="p-6 rounded-2xl shadow-md hover:shadow-lg transition cursor-pointer flex justify-between items-center text-start border border-gray-200 dark:border-gray-900 bg-gray-950/80 hover:bg-gray-100 dark:hover:bg-gray-950 w-[60vw]"
+              className="p-4 sm:p-6 rounded-2xl shadow-md hover:shadow-lg transition cursor-pointer flex justify-between items-center text-start border border-gray-900 bg-gray-950/80 hover:bg-gray-950"
               onClick={() => setSelected(selected === index ? null : index)}
             >
               <div>
-                <h3 className="text-xl font-extrabold">
+                <h3 className="text-lg sm:text-xl font-extrabold">
                   {item.year} – {item.title}
                 </h3>
-                <p className="text-gray-400 mt-2">{item.description}</p>
+                <p className="text-gray-400 mt-2 text-sm sm:text-base">{item.description}</p>
               </div>
+            
             </button>
 
           </motion.div>
@@ -77,5 +78,6 @@ const containerRef = useRef<HTMLDivElement | null>(null);
       </div>
     </div>
     </div>
+
   );
 }

@@ -5,7 +5,6 @@ import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import HomeText from "@/components/home-text";
-// import DecryptedText from "@/ui/decrypted-text";
 
 const works = [
   {
