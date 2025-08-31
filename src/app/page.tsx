@@ -125,6 +125,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* I AM YET TO ADD SKILLS THAT I HAVE, LANGUAGES THAT I CAN WRITE */}
     </div>
   );
 }

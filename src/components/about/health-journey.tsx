@@ -35,7 +35,7 @@ const containerRef = useRef<HTMLDivElement | null>(null);
     <div className="relative py-2">
 
         <div className="italic text-gray-400 mb-8 w-[90%] lg:w-[70%] mx-auto text-sm sm:text-[1.05rem]">
-            I was always drawn to helping people feel better even at a young age, whether it was tending to a someone who wasn't feeling well or staying close and offering emotional relief.
+            I was always drawn to helping people feel better even at a young age, whether it was tending to a someone who was&napos;t feeling well or staying close and offering emotional relief.
         </div>
 
       {/* progress line */}

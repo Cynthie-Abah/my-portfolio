@@ -16,19 +16,19 @@ const timelineData = [
  },
   { 
     year: "2023", 
-    title: "Startup Experience – IMall", 
+    title: "Startup Experience - IMall", 
     description: "Contributed to product development at IMall, gaining hands-on experience with collaboration, and delivering features for real users.", 
     image: "/imall.jpeg"
  },
   { 
-    year: "2023–2024", 
+    year: "2023-2024", 
     title: "Women Techsters Fellowship", 
     description: "Completed the Women Techsters Fellowship in Software Development where I enhanced my technical expertise while building teamwork, leadership, and professional communication skills.", 
     image: "/wtech.jpeg" 
 },
   { 
     year: "2025", 
-    title: "Quadups – Frontend Lead Engineer", 
+    title: "Quadups - Frontend Lead Engineer", 
     description: "Currently leading frontend development at Quadups while also managing social media strategy. It’s a mix of technical leadership and creative storytelling, helping us scale both our products and brand.", 
 },
 ];
