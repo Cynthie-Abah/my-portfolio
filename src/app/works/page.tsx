@@ -288,12 +288,12 @@ export default function Page() {
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <Link
-                      href={`/project/${project.id}`}
+                    {/* <Link
+                      href={`/works/${project.id}`}
                       className="text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
                     >
                       View Details
-                    </Link>
+                    </Link> */}
                     
                     <div className="flex items-center space-x-3">
                       {project.deployedUrl && (
