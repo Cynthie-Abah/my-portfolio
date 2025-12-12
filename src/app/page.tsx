@@ -55,6 +55,7 @@ export default function Home() {
               <Button 
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-blue-600 dark:text-blue-400 bg-transparent border-2 border-blue-600 dark:border-blue-400 rounded-lg  transform hover:scale-105 transition-all duration-200 shadow-lg" 
               text='Get In Touch'
+              onClick={() => window.location.href = "mailto:abahojomacynthia.com"}
               />
               
             </div>
