@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import Link from "next/link";
 import Image from "next/image";
 import HomeText from "@/components/home-text";
 
