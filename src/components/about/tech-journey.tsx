@@ -2,36 +2,7 @@ import { motion, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-
-const timelineData = [
-  { 
-    year: "2022", 
-    title: "ADSE Program", 
-    description: "Built my first e-commerce site on Shopify, which sparked my interest in software engineering. Later that year, I enrolled in an Advanced Diploma in Software Engineering (ADSE), gaining a strong foundation in software Engineering", 
- },
-  { 
-    year: "2023", 
-    title: "First Hackathon", 
-    description: "Competed in my first web application hackathon across all Aptech centers and placed 3rd runner-up, validating my technical and problem-solving skills under pressure.", 
- },
-  { 
-    year: "2023", 
-    title: "Startup Experience - IMall", 
-    description: "Contributed to product development at IMall, gaining hands-on experience with collaboration, and delivering features for real users.", 
-    image: "/imall.jpeg"
- },
-  { 
-    year: "2023-2024", 
-    title: "Women Techsters Fellowship", 
-    description: "Completed the Women Techsters Fellowship in Software Development where I enhanced my technical expertise while building teamwork, leadership, and professional communication skills.", 
-    image: "/wtech.jpeg" 
-},
-  { 
-    year: "2025", 
-    title: "Quadups - Frontend Lead Engineer", 
-    description: "Currently leading frontend development at Quadups while also managing social media strategy. It’s a mix of technical leadership and creative storytelling, helping us scale both our products and brand.", 
-},
-];
+import { techTimelineData } from "@/app/constants";
 
 export default function TechJourney() {
 
@@ -45,7 +16,7 @@ const containerRef = useRef<HTMLDivElement | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <div ref={containerRef} className="h-[75vh] w-full overflow-y-auto">
+    <div ref={containerRef} className="h-[75vh] w-full overflow-y-auto scrollbar-hide">
     <div className="relative py-2">
 
       <div className="italic text-gray-400 mb-8 w-[90%] lg:w-[70%] mx-auto text-sm sm:text-[1.05rem]">
@@ -60,7 +31,7 @@ const containerRef = useRef<HTMLDivElement | null>(null);
         />
 
         <div className="md:w-[90%] lg:w-[70%] flex flex-col">
-           {timelineData.map((item, index) => (
+            {techTimelineData.map((item, index) => (
           <motion.div
             key={index + item.title}
             initial={{ opacity: 0, x: -50 }}
@@ -98,7 +69,7 @@ const containerRef = useRef<HTMLDivElement | null>(null);
             {/* Expandable Image */}
             {item.image && selected === index && (
 
-                 <div className="py-2 w-full overflow-hidden relative">
+                <div className="py-2 w-full overflow-hidden relative">
                     <Image
                     width={400}
                     height={225}

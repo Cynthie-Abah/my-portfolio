@@ -1,23 +1,6 @@
+import { healthcareTimelineData } from "@/app/constants";
 import { motion, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
-
-const timelineData = [
-  { 
-    year: "2019–2020", 
-    title: "Assistant Chief Infirmarian", 
-    description: "Began caring for others while in secondary school. My dedication was recognized by the school infirmary board, where I was appointed Assistant Chief Infirmarian.", 
-  },
-  { 
-    year: "2023", 
-    title: "Direct Entry into Nursing Science", 
-    description: "Earned A-level qualifications through JUPEB, which granted me direct entry into 200 Level Nursing Science at the University of Nigeria.", 
-  },
-  { 
-    year: "2025", 
-    title: "Clinical Training in 400 Level", 
-    description: "Currently in 400 Level, gaining hands-on experience across diverse nursing fields: Medical-Surgical Nursing at UNTH Enugu, Community Health Nursing at Amokpo Health Centre, Mental Health Nursing at Federal Neuropsychiatric Hospital Enugu, and Reproductive Health Nursing at Poly General Hospital Enugu.", 
-  },
-];
 
 export default function HealthJourney() {
 
@@ -31,7 +14,7 @@ const containerRef = useRef<HTMLDivElement | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <div ref={containerRef} className="h-[75vh] w-full overflow-y-auto">
+    <div ref={containerRef} className="h-[75vh] w-full overflow-y-auto scrollbar-hide">
     <div className="relative py-2">
 
         <div className="italic text-gray-400 mb-8 w-[90%] lg:w-[70%] mx-auto text-sm sm:text-[1.05rem]">
@@ -39,14 +22,14 @@ const containerRef = useRef<HTMLDivElement | null>(null);
         </div>
 
       {/* progress line */}
-      <div className="flex justify-center mx-auto gap-5 mb-10 w-full">
+      <div className="flex justify-center mx-auto gap-5 mb-10 w-full ">
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className="w-3 sm:w-1.5 bg-[#8319f1] rounded-full origin-top z-50"
         />
 
         <div className="md:w-[90%] lg:w-[70%] flex flex-col">
-           {timelineData.map((item, index) => (
+           {healthcareTimelineData.map((item, index) => (
           <motion.div
             key={index + item.title}
             initial={{ opacity: 0, x: -50 }}
