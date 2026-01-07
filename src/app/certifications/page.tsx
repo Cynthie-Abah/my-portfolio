@@ -1,30 +1,7 @@
 "use client"
 import HomeText from "@/components/home-text"
 import Image from "next/image"
-
-const certifications = [
-  {
-    title: "Women Techsters Fellowship Program: Software Development stack",
-    issuer: "Tech4Dev",
-    date: "Issued October 2024",
-    credentialUrl: "/wtf-cert.jpg",
-    logo: "/wtf-cert.jpg",
-  },
-  {
-    title: "Ultimate React and Next.js Course: Redux, context, react-query, and more",
-    issuer: "Udemy",
-    date: "Issued August 2025",
-    credentialUrl: "/udemy.jpg",
-    logo: "/udemy.jpg",
-  },
-  {
-    title: "Great Learning Frontend Course",
-    issuer: "Scrimba",
-    date: "Issued April 2024",
-    credentialUrl: "/greatlearning.jpeg",
-    logo: "/greatlearning.jpeg",
-  },
-]
+import { certifications } from "../constants"
 
 export default function CertificationsPage() {
   return (

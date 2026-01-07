@@ -13,6 +13,37 @@ export const workStats = [
   right: { hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0 } },
 }
 
+export const certifications = [
+  {
+    title: "Women Techsters Fellowship Program: Software Development stack",
+    issuer: "Tech4Dev",
+    date: "Issued October 2024",
+    credentialUrl: "/wtf-cert.jpg",
+    logo: "/wtf-cert.jpg",
+  },
+  {
+    title: "Ultimate React and Next.js Course: Redux, context, react-query, and more",
+    issuer: "Udemy",
+    date: "Issued August 2025",
+    credentialUrl: "/udemy.jpg",
+    logo: "/udemy.jpg",
+  },
+  {
+    title: "Great Learning Frontend Course",
+    issuer: "Scrimba",
+    date: "Issued April 2024",
+    credentialUrl: "/greatlearning.jpeg",
+    logo: "/greatlearning.jpeg",
+  },
+  {
+    title: "HNG i13 Internship Program",
+    issuer: "HNG TECH",
+    date: "Issued December 2025",
+    credentialUrl: "/hng_finalist.jpeg",
+    logo: "/hng_finalist.jpeg",
+  },
+]
+
 export const dashboardCards = [
         {
           title: "Web Development",
@@ -77,10 +108,15 @@ export const techTimelineData = [
     title: "Quadups - Frontend Lead Engineer", 
     description: "Currently leading frontend development at Quadups while also managing social media strategy. It’s a mix of technical leadership and creative storytelling, helping us scale both our products and brand.", 
 },
+  { 
+    year: "2025", 
+    title: "HNG i13 - Frontend Intern", 
+    description: "Currently leading frontend development at Quadups while also managing social media strategy. It’s a mix of technical leadership and creative storytelling, helping us scale both our products and brand.", 
+    image: '/hng_finalist.jpeg'
+},
 ];
 
-export 
-const works = [
+export const works = [
   {
     title: "Frontend Development",
     works: [
@@ -155,6 +191,15 @@ const works = [
         techStack: ["React Native", "Expo", "Clerk", "Convex", "Zustand", "React Hook Form"],
         deployedUrl: "https://drive.google.com/file/d/1M-abBorVMPgp-2_NnTR06efM558I493i/view?usp=drive_link",
         githubUrl: "https://github.com/Cynthie-Abah/framez.git",
+      },
+      {
+        id: "Onboarding Tour Platform",
+        title: "Onboarding Tour Platform",
+        shortDescription: "The Onboarding Tour Platform provides businesses with an easy-to-use system for creating guided user experiences. Users are guided through customizable multi-step tours with smooth animations, progress tracking, and analytics. The platform is designed as a complete product ecosystem with distinct components working seamlessly together.",
+        image: "/onboardingTour.png",
+        techStack: ["Next Js", "ShadCN", "Supabase", "Framer Motion", "TailwindCSS"],
+        deployedUrl: "https://onboarding-tour-platform.vercel.app/",
+        githubUrl: "https://github.com/Cynthie-Abah/onboarding-tour-platform.git",
       },
     ],
   }
